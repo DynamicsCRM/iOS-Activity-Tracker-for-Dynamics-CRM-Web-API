@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="loadingIndicator" destination="9Z2-0J-Vbc" id="pD5-dO-gQl"/>
+                <outlet property="resultsView" destination="xUD-iK-oFa" id="MfN-Em-55j"/>
+                <outlet property="theSearchBar" destination="Qhq-7H-b0g" id="uAQ-eU-GFw"/>
+                <outlet property="view" destination="UMS-a6-T6e" id="IJC-6f-3vB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="UMS-a6-T6e">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Qhq-7H-b0g">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8Ug-a8-KcT"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="CHl-3e-2vu"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xUD-iK-oFa">
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tVa-gA-OFG"/>
+                        <outlet property="delegate" destination="-1" id="3XP-I5-h1B"/>
+                    </connections>
+                </tableView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spinner" translatesAutoresizingMaskIntoConstraints="NO" id="9Z2-0J-Vbc">
+                    <rect key="frame" x="135" y="152" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="GCi-q4-okv"/>
+                        <constraint firstAttribute="height" constant="50" id="z0d-L3-o6E"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xUD-iK-oFa" firstAttribute="top" secondItem="Qhq-7H-b0g" secondAttribute="bottom" id="0wW-ny-3s9"/>
+                <constraint firstAttribute="bottom" secondItem="xUD-iK-oFa" secondAttribute="bottom" id="35g-X5-nBh"/>
+                <constraint firstAttribute="trailing" secondItem="Qhq-7H-b0g" secondAttribute="trailing" id="HVg-sd-ipv"/>
+                <constraint firstItem="xUD-iK-oFa" firstAttribute="leading" secondItem="UMS-a6-T6e" secondAttribute="leading" id="MvP-zD-Pu7"/>
+                <constraint firstAttribute="trailing" secondItem="xUD-iK-oFa" secondAttribute="trailing" id="P1C-NZ-ow1"/>
+                <constraint firstItem="9Z2-0J-Vbc" firstAttribute="top" secondItem="Qhq-7H-b0g" secondAttribute="bottom" constant="108" id="Pzh-jH-Xgc"/>
+                <constraint firstItem="9Z2-0J-Vbc" firstAttribute="centerX" secondItem="UMS-a6-T6e" secondAttribute="centerX" id="Rd0-ep-qhA"/>
+                <constraint firstItem="Qhq-7H-b0g" firstAttribute="top" secondItem="UMS-a6-T6e" secondAttribute="top" id="ZeP-H5-KZm"/>
+                <constraint firstAttribute="trailing" secondItem="xUD-iK-oFa" secondAttribute="trailing" id="gCD-rX-H1Y"/>
+                <constraint firstItem="xUD-iK-oFa" firstAttribute="leading" secondItem="UMS-a6-T6e" secondAttribute="leading" id="i7r-id-0J5"/>
+                <constraint firstItem="Qhq-7H-b0g" firstAttribute="leading" secondItem="UMS-a6-T6e" secondAttribute="leading" id="iIV-pB-O82"/>
+                <constraint firstItem="xUD-iK-oFa" firstAttribute="top" secondItem="UMS-a6-T6e" secondAttribute="top" constant="44" id="mmj-Mv-Oub"/>
+                <constraint firstAttribute="bottom" secondItem="xUD-iK-oFa" secondAttribute="bottom" id="zXf-hY-0Tr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="spinner" width="200" height="200"/>
+    </resources>
+</document>

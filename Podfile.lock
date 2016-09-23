@@ -1,0 +1,15 @@
+PODS:
+  - ADAL (2.1.2):
+    - ADAL/iosinternalheaders (= 2.1.2)
+    - ADAL/no-arc (= 2.1.2)
+    - ADAL/tokencacheheader (= 2.1.2)
+  - ADAL/no-arc (2.1.2)
+  - ADAL/tokencacheheader (2.1.2)
+
+DEPENDENCIES:
+  - ADAL (~> 2.1.2)
+
+SPEC CHECKSUMS:
+  ADAL: 97f694ee4bea1090ffbc4cad26a7958f6d98d936
+
+COCOAPODS: 0.39.0
